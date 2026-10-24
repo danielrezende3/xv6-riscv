@@ -1,0 +1,6 @@
+{
+  "clangd.path": "/opt/homebrew/opt/llvm/bin/clangd",
+  "files.associations": {
+    "*.h": "c"
+  }
+}

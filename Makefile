@@ -203,3 +203,8 @@ check-qemu-version:
 .PHONY: fmt
 fmt:
 	clang-format -i $(wildcard kernel/*.[ch] user/*.[ch] mkfs/*.c)
+
+# Regenerate from the build recipes, including files already compiled.
+.PHONY: compile_commands.json
+compile_commands.json:
+	python3 tools/compile_commands.py "$(MAKE)"

@@ -46,3 +46,11 @@ You will need a RISC-V "newlib" tool chain from
 https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
+
+EDITOR SETUP
+
+With Python 3 and the RISC-V toolchain installed, run
+"make compile_commands.json" to generate clangd's compilation database.
+This reads a dry run of the build; it does not compile or launch xv6.
+Run it again after changing compiler flags or adding source files.
+The generated file contains local paths and is ignored by Git.

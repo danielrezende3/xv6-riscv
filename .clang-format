@@ -1,10 +1,12 @@
-SortIncludes: Never
+SortIncludes:
+  Enabled: false
 ReflowComments: Never
 
 BreakAfterReturnType: TopLevelDefinitions
 BreakBeforeBraces: Custom
 BraceWrapping:
   AfterFunction: true
-AlignConsecutiveMacros: Consecutive
+AlignConsecutiveMacros:
+  Enabled: true
 ContinuationIndentWidth: 2
 BreakStringLiterals: false

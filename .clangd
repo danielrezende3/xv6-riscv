@@ -1,0 +1,18 @@
+# Compiler flags come from compile_commands.json.
+If:
+  PathMatch: (kernel|user)/.*
+CompileFlags:
+  Add: [--target=riscv64-unknown-elf]
+
+---
+# These headers rely on prerequisites normally supplied by their includers.
+If:
+  PathMatch: user/user\.h
+CompileFlags:
+  Add: [-include, kernel/types.h]
+
+---
+If:
+  PathMatch: kernel/buf\.h
+CompileFlags:
+  Add: [-include, kernel/types.h, -include, kernel/spinlock.h, -include, kernel/sleeplock.h, -include, kernel/fs.h]

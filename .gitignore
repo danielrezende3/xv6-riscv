@@ -10,3 +10,4 @@ _*
 /user/usys.S
 .gdbinit
 TAGS
+compile_commands.json
